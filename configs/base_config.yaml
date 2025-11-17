@@ -31,3 +31,15 @@ training:
   patience: 30 # Early stopping
   train_split: 0.8
   val_split: 0.1 # 10% of the training set
+
+reconstruction:
+  subsample_size: 1024  # As per report section II.A.3
+  output_dim: 2000      # Number of genes to reconstruct (usually n_hvg)
+  
+  model:
+    learning_rate: 0.01 # Linear regression often tolerates higher LR
+    
+  metrics:
+    - "r2"
+    - "pearson"
+    - "spearman"
