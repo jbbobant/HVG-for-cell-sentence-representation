@@ -1,0 +1,33 @@
+project:
+  name: "CellSentence_HVG_Evaluation"
+  seed: 1234
+  device: "cuda" # or "cpu"
+
+paths:
+  input_data: "data/raw/pheart_nhvg.h5ad"
+  output_dir: "outputs/"
+
+preprocessing:
+  min_genes_per_cell: 200
+  min_cells_per_gene: 3
+  max_n_genes_by_counts: 6000
+  max_pct_mt: 50.0
+  n_hvg: 2000
+  use_hvg: true  # Switch to false for full genome
+  
+  # Cell2Sentence specific
+  sentence_delimiter: ""
+  
+model:
+  input_dim: 2000 # Will be overwritten dynamically based on embedding
+  hidden_dim_1: 512
+  hidden_dim_2: 256
+  dropout: 0.1
+  learning_rate: 0.001
+
+training:
+  batch_size: 128
+  epochs: 150
+  patience: 30 # Early stopping
+  train_split: 0.8
+  val_split: 0.1 # 10% of the training set
