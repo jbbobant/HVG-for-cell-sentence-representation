@@ -1,0 +1,25 @@
+# Core Machine Learning Framework
+torch>=2.0.0
+numpy>=1.23.0
+
+# Data Processing & Biology
+scanpy>=1.9.0
+anndata>=0.8.0
+pandas>=1.5.0
+scipy>=1.10.0
+cell2sentence>=0.1.0
+
+# Machine Learning Utilities
+scikit-learn>=1.2.0
+tqdm>=4.65.0
+
+# Configuration & System
+PyYAML>=6.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Testing & Development
+pytest>=7.3.0
+pytest-cov>=4.1.0
